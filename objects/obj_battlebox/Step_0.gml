@@ -1,4 +1,10 @@
-_x1 = 300;
-_y1 = 350;
-_x2 = 500;
-_y2 = 550;
+var sw = window_get_width();
+var sh = window_get_height();
+
+var scx = sw/2;
+var scy = sh/2;
+
+_x1 = scx-(scx/4);
+_y1 = 260;
+_x2 = scx+(scx/4);
+_y2 = 420;

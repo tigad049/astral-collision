@@ -21,6 +21,7 @@
     {"name":"obj_platform","order":1,"path":"objects/obj_platform/obj_platform.yy",},
     {"name":"keybind_pressed","order":1,"path":"scripts/keybind_pressed/keybind_pressed.yy",},
     {"name":"keybind_released","order":2,"path":"scripts/keybind_released/keybind_released.yy",},
+    {"name":"spr_battlebg","order":2,"path":"sprites/spr_battlebg/spr_battlebg.yy",},
     {"name":"spr_platform","order":1,"path":"sprites/spr_platform/spr_platform.yy",},
   ],
 }
