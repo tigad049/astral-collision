@@ -5,4 +5,5 @@ global.sh = window_get_height();
 global.scx = global.sw/2;
 global.scy = global.sh/2;
 
-audio_play_sound(mus_astralcollision, 0, true)
+audio_play_sound(mus_astralcollision, 0, true);
+//audio_play_sound(mus_gameover, 0, true, 1, 0, 0.925);
