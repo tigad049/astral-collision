@@ -4,3 +4,5 @@ global.sw = window_get_width();
 global.sh = window_get_height();
 global.scx = global.sw/2;
 global.scy = global.sh/2;
+
+audio_play_sound(mus_astralcollision, 0, true)

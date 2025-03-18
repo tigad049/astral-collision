@@ -34,7 +34,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1300.0.768",
+    "IDEVersion":"2024.1300.0.775",
   },
   "name":"AstralCollision",
   "resources":[
@@ -47,6 +47,7 @@
     {"id":{"name":"keybind_pressed","path":"scripts/keybind_pressed/keybind_pressed.yy",},},
     {"id":{"name":"keybind_released","path":"scripts/keybind_released/keybind_released.yy",},},
     {"id":{"name":"keybind","path":"scripts/keybind/keybind.yy",},},
+    {"id":{"name":"mus_astralcollision","path":"sounds/mus_astralcollision/mus_astralcollision.yy",},},
     {"id":{"name":"spr_battlebg","path":"sprites/spr_battlebg/spr_battlebg.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},},
