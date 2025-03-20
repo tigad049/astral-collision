@@ -1,0 +1,1 @@
+draw_sprite(spr_btl_act, 0, 24, 432);

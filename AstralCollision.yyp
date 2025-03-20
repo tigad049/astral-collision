@@ -39,6 +39,7 @@
   "name":"AstralCollision",
   "resources":[
     {"id":{"name":"obj_battlebox","path":"objects/obj_battlebox/obj_battlebox.yy",},},
+    {"id":{"name":"obj_battlemenu","path":"objects/obj_battlemenu/obj_battlemenu.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
     {"id":{"name":"obj_playersoul","path":"objects/obj_playersoul/obj_playersoul.yy",},},
@@ -62,6 +63,7 @@
     {"id":{"name":"snd_txt1","path":"sounds/snd_txt1/snd_txt1.yy",},},
     {"id":{"name":"snd_txt2","path":"sounds/snd_txt2/snd_txt2.yy",},},
     {"id":{"name":"spr_battlebg","path":"sprites/spr_battlebg/spr_battlebg.yy",},},
+    {"id":{"name":"spr_btl_act","path":"sprites/spr_btl_act/spr_btl_act.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},},
   ],
