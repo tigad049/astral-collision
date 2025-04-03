@@ -39,6 +39,7 @@
     {"name":"snd_txt2","order":2,"path":"sounds/snd_txt2/snd_txt2.yy",},
     {"name":"spr_battlebg","order":2,"path":"sprites/spr_battlebg/spr_battlebg.yy",},
     {"name":"spr_btl_act","order":3,"path":"sprites/spr_btl_act/spr_btl_act.yy",},
+    {"name":"spr_btl_fight","order":4,"path":"sprites/spr_btl_fight/spr_btl_fight.yy",},
     {"name":"spr_platform","order":1,"path":"sprites/spr_platform/spr_platform.yy",},
   ],
 }

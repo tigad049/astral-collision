@@ -64,6 +64,7 @@
     {"id":{"name":"snd_txt2","path":"sounds/snd_txt2/snd_txt2.yy",},},
     {"id":{"name":"spr_battlebg","path":"sprites/spr_battlebg/spr_battlebg.yy",},},
     {"id":{"name":"spr_btl_act","path":"sprites/spr_btl_act/spr_btl_act.yy",},},
+    {"id":{"name":"spr_btl_fight","path":"sprites/spr_btl_fight/spr_btl_fight.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},},
   ],
