@@ -30,6 +30,7 @@
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"DTM-Mono.otf","CopyToMask":-1,"filePath":"datafiles","name":"DTM-Mono.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"DTM-Sans.otf","CopyToMask":-1,"filePath":"datafiles","name":"DTM-Sans.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"MNC.ttf","CopyToMask":-1,"filePath":"datafiles","name":"MNC.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
@@ -65,6 +66,8 @@
     {"id":{"name":"spr_battlebg","path":"sprites/spr_battlebg/spr_battlebg.yy",},},
     {"id":{"name":"spr_btl_act","path":"sprites/spr_btl_act/spr_btl_act.yy",},},
     {"id":{"name":"spr_btl_fight","path":"sprites/spr_btl_fight/spr_btl_fight.yy",},},
+    {"id":{"name":"spr_btl_item","path":"sprites/spr_btl_item/spr_btl_item.yy",},},
+    {"id":{"name":"spr_btl_mercy","path":"sprites/spr_btl_mercy/spr_btl_mercy.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},},
   ],
