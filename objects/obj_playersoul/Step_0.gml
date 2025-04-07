@@ -53,37 +53,18 @@ if (global.battle_state == 1) {
 		}
 	}
 	
-	// WHY DOES THIS WORK
-	keybind_pressed(vk_left, function() {soul_move("left")})
-	keybind_pressed(vk_right, function() {soul_move("right")})
-	keybind_pressed(vk_up, function() {soul_move("up")})
-	keybind_pressed(vk_down, function() {soul_move("down")})
+	if (global.key_left_pressed) {soul_move("left")}
+	if (global.key_right_pressed) {soul_move("right")}
+	if (global.key_up_pressed) {soul_move("up")}
+	if (global.key_down_pressed) {soul_move("down")}
 	
-	keybind_released(vk_left, function() {left_held = false; if right_held {soul_move("right")} else {hspeed = 0}})
-	keybind_released(vk_right, function() {right_held = false; if left_held {soul_move("left")} else {hspeed = 0}})
-	keybind_released(vk_up, function() {up_held = false; if down_held {soul_move("down")} else {vspeed = 0}})
-	keybind_released(vk_down, function() {down_held = false; if up_held {soul_move("up")} else {vspeed = 0}})
+	if (global.key_left_released) {left_held = false; if right_held {soul_move("right")} else {hspeed = 0}}
+	if (global.key_right_released) {right_held = false; if left_held {soul_move("left")} else {hspeed = 0}}
+	if (global.key_up_released) {up_held = false; if down_held {soul_move("down")} else {vspeed = 0}}
+	if (global.key_down_released) {down_held = false; if up_held {soul_move("up")} else {vspeed = 0}}
 	
-	keybind_pressed(ord("A"), function() {soul_move("left")})
-	keybind_pressed(ord("D"), function() {soul_move("right")})
-	keybind_pressed(ord("W"), function() {soul_move("up")})
-	keybind_pressed(ord("S"), function() {soul_move("down")})
-	
-	keybind_released(ord("A"), function() {left_held = false; if right_held {soul_move("right")} else {hspeed = 0}})
-	keybind_released(ord("D"), function() {right_held = false; if left_held {soul_move("left")} else {hspeed = 0}})
-	keybind_released(ord("W"), function() {up_held = false; if down_held {soul_move("down")} else {vspeed = 0}})
-	keybind_released(ord("S"), function() {down_held = false; if up_held {soul_move("up")} else {vspeed = 0}})
-	
-	
-	//keybind_released(vk_left, function() {left_held = false; hspeed = 0})
-	//keybind_released(vk_right, function() {right_held = false; hspeed = 0})
-	//keybind_released(vk_up, function() {up_held = false; vspeed = 0})
-	//keybind_released(vk_down, function() {down_held = false; vspeed = 0})
-	
-	keybind_pressed(ord("X"), function() {_speed =  _speed/2; speed = speed/2})
-	keybind_released(ord("X"), function() {_speed =  _speed*2; speed = speed*2})
-	keybind_pressed(vk_shift, function() {_speed =  _speed/2; speed = speed/2})
-	keybind_released(vk_shift, function() {_speed =  _speed*2; speed = speed*2})
+	if (global.key_cancel_pressed) {_speed =  _speed/2; speed = speed/2}
+	if (global.key_cancel_released) {_speed =  _speed*2; speed = speed*2}
 }
 
 // UI CODE ==============================

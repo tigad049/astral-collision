@@ -1,11 +1,11 @@
-if keyboard_check_pressed(vk_left) {
+if (global.key_left) {
 	button_select -= 1;
 	if (button_select <= 0) {
 		button_select = 4;
 	}
 }
 
-if keyboard_check_pressed(vk_right) {
+if (global.key_right) {
 	button_select += 1;
 	if (button_select >= 5) {
 		button_select = 1;
