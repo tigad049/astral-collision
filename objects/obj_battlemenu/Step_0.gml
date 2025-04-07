@@ -1,11 +1,11 @@
-if (global.key_left) {
+if (global.key_left_pressed) {
 	button_select -= 1;
 	if (button_select <= 0) {
 		button_select = 4;
 	}
 }
 
-if (global.key_right) {
+if (global.key_right_pressed) {
 	button_select += 1;
 	if (button_select >= 5) {
 		button_select = 1;
