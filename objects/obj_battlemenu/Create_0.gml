@@ -15,3 +15,5 @@ fight_sel = 0;
 act_sel = 0;
 item_sel = 0;
 mercy_sel = 0;
+
+no_items = false;

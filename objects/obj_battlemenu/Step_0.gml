@@ -1,8 +1,19 @@
+if array_length(global.plr_items) == 0 {
+	no_items = true;
+	item_color = #999999;
+} else {
+	no_items = false;
+	item_color = #FF7F27;
+}
+
 if (global.battle_state == 0) {
 	if (global.key_left_pressed) {
 		button_select -= 1;
 		if (button_select <= 0) {
 			button_select = 4;
+		}
+		if (no_items and button_select == 3) {
+			button_select -= 1;
 		}
 	}
 
@@ -11,11 +22,13 @@ if (global.battle_state == 0) {
 		if (button_select >= 5) {
 			button_select = 1;
 		}
+		if (no_items and button_select == 3) {
+			button_select += 1;
+		}
 	}
 
 	fight_color = #FF7F27;
 	act_color = #FF7F27;
-	item_color = #FF7F27;
 	mercy_color = #FF7F27;
 
 	fight_sel = 0;
