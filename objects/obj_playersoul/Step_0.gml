@@ -70,23 +70,46 @@ if (global.battle_state == 1) {
 // UI CODE ==============================
 if (global.battle_state == 0) {
 	if object_exists(obj_battlemenu) {
-		y = 454;
-		switch (obj_battlemenu.button_select) {
-			case 1:
-				x = 49;
-				break;
+		if obj_battlemenu.menu_state == 0 {
+			y = 454;
+			switch (obj_battlemenu.button_select) {
+				case 1:
+					x = 49;
+					break;
 				
-			case 2:
-				x = 202;
-				break;
+				case 2:
+					x = 202;
+					break;
 				
-			case 3:
-				x = 362;
-				break;
+				case 3:
+					x = 362;
+					break;
 				
-			case 4:
-				x = 517;
-				break;
+				case 4:
+					x = 517;
+					break;
+			}
+		} else if obj_battlemenu.menu_state == 1 {
+			switch (obj_battlemenu.menu_option_select[0]) {
+				case 0:
+					x = 73;
+					break;
+				case 1:
+					x = (global.scx-12)+21;
+					break;
+			}
+			
+			switch (obj_battlemenu.menu_option_select[1]) {
+				case 0:
+					y = 287;
+					break;
+				case 1:
+					y = 287+32;
+					break;
+				case 2:
+					y = 287+64;
+					break;
+			}
 		}
 	}
 }

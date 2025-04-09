@@ -13,7 +13,7 @@ global.battle_state = 0;
 global.plr_name = "GASTER";
 global.plr_hp_max = 20;
 global.plr_lvl = 1;
-global.plr_items = [];
+global.plr_items = [7827, 7827];
 
 audio_play_sound(mus_astralcollision, 0, true);
 //audio_play_sound(mus_gameover, 0, true, 1, 0, 0.925);

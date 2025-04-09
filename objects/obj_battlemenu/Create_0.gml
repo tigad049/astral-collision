@@ -17,3 +17,26 @@ item_sel = 0;
 mercy_sel = 0;
 
 no_items = false;
+
+// 0 = selecting the 4 buttons
+// 1 = selected a button, going through the menus
+menu_state = 0;
+
+// 1 = selecting target
+// 2 = qte
+fight_option_state = 0;
+
+// 1 = selecting target
+// 2 = act menu options
+act_option_state = 0;
+
+// 4 items on every page, 12 in total?
+// starts at 1, goes through 3
+item_page = 0;
+
+// i don't think mercy needs a variable here
+
+// x,y coords for selecting buttons when in a menu
+menu_option_select = [0, 0];
+
+max_menu_option_select = [1, 2];
