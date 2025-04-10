@@ -63,40 +63,49 @@ if (global.battle_state == 0) {
 	button_select = 0;
 }
 
+if (global.key_cancel_pressed and menu_state == 1) {
+	if fight_sel {fight_option_state -= 1}
+	if act_sel {act_option_state -= 1}
+	if item_sel {item_page = 0}
+	if mercy_sel {mercy_option_state -= 1} // todo: work on this thing
+	if fight_option_state == 0 and act_option_state == 0 and item_page == 0 and mercy_option_state == 0 {menu_state = 0}
+}
+
+if (global.key_confirm_pressed and menu_state == 1) {
+	//if fight_sel {fight_option_state = 2}
+	if act_option_state == 1 {act_option_state = 2}
+}
+
 if (global.key_confirm_pressed and menu_state == 0) {
 	menu_state = 1;
 	if fight_sel {fight_option_state = 1}
 	if act_sel {act_option_state = 1}
 	if item_sel {item_page = 1}
-	if mercy_sel {} // todo: work on this thing
-}
-
-if (global.key_cancel_pressed and menu_state == 1) {
-	menu_state = 0;
-	if fight_sel {fight_option_state = 0}
-	if act_sel {act_option_state = 0}
-	if item_sel {item_page = 0}
-	if mercy_sel {} // todo: work on this thing
+	if mercy_sel {mercy_option_state = 1}
 }
 
 if menu_state == 1 {
 	if global.key_left_pressed {
-		menu_option_select[0] -= 1;
-		if menu_option_select[0] < 0 {menu_option_select[0] = max_menu_option_select[0]}
+		if max_menu_option_select[0] != 0 {
+			menu_option_select[0] -= 1;
+		}
 	}
 	
 	if global.key_right_pressed {
-		menu_option_select[0] += 1;
-		if menu_option_select[0] > max_menu_option_select[0] {menu_option_select[0] = 0}
+		if max_menu_option_select[0] != 0 {
+			menu_option_select[0] += 1;
+		}
 	}
 	
 	if global.key_up_pressed {
-		menu_option_select[1] -= 1;
-		if menu_option_select[1] < 0 {menu_option_select[1] = max_menu_option_select[1]}
+		if max_menu_option_select[1] != 0 {
+			menu_option_select[1] -= 1;
+		}
 	}
 	
 	if global.key_down_pressed {
-		menu_option_select[1] += 1;
-		if menu_option_select[1] > max_menu_option_select[1] {menu_option_select[1] = 0}
+		if max_menu_option_select[1] != 0 {
+			menu_option_select[1] += 1;
+		}
 	}
 }

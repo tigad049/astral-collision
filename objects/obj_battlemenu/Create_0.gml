@@ -34,9 +34,24 @@ act_option_state = 0;
 // starts at 1, goes through 3
 item_page = 0;
 
-// i don't think mercy needs a variable here
+// variable to see if user selected mercy or not
+mercy_option_state = 0;
 
 // x,y coords for selecting buttons when in a menu
 menu_option_select = [0, 0];
 
 max_menu_option_select = [1, 2];
+old_max_menu_option_select = max_menu_option_select;
+
+function set_max_options(_x, _y) {
+	max_menu_option_select = [_x, _y];
+	check_oob();
+}
+
+function check_oob() {
+	if menu_option_select[0] < 0 {menu_option_select[0] = max_menu_option_select[0]}
+	if menu_option_select[0] > max_menu_option_select[0] {menu_option_select[0] = 0}
+	if menu_option_select[1] < 0 {menu_option_select[1] = max_menu_option_select[1]}
+	if menu_option_select[1] > max_menu_option_select[1] {menu_option_select[1] = 0}
+	obj_playersoul.update_ui_pos();
+}
