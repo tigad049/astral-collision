@@ -41,7 +41,6 @@ mercy_option_state = 0;
 menu_option_select = [0, 0];
 
 max_menu_option_select = [1, 2];
-old_max_menu_option_select = max_menu_option_select;
 
 function set_max_options(_x, _y) {
 	max_menu_option_select = [_x, _y];
