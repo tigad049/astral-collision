@@ -30,6 +30,13 @@ if act_option_state > 0 {
 		set_max_options(1, 0);
 		draw_text(52, 270, "   * Check");
 		draw_text(global.scx-12, 270, "   * Talk");
+	} else if act_option_state == 3 {
+		global.hide_player_soul = true;
+		draw_text(52, 270, "* bweh");
+		button_select = 0;
+	} else if act_option_state >= 4 {
+		obj_game.switch_battle_state(1);
+		act_option_state = 0;
 	}
 }
 

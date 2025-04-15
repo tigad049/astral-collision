@@ -10,6 +10,8 @@ global.scy = global.sh/2;
 // 0 = player's turn, 1 = enemy's turn
 global.battle_state = 0;
 
+global.hide_player_soul = false;
+
 global.plr_name = "GASTER";
 global.plr_hp_max = 20;
 global.plr_lvl = 1;
@@ -41,3 +43,30 @@ global.key_down_released = keyboard_check_released(vk_down) || keyboard_check_re
 global.key_confirm_released = keyboard_check_released(vk_enter) || keyboard_check_released(ord("Z"))
 global.key_cancel_released = keyboard_check_released(vk_shift) || keyboard_check_released(ord("X"))
 global.key_menu_released = keyboard_check_released(vk_control) || keyboard_check_released(ord("C"))
+
+function switch_battle_state(state) {
+	if state == 1 {
+		global.hide_player_soul = true;
+		global.battle_state = state;
+		obj_battlemenu.menu_state = -1;
+		obj_battlemenu.block_input = 1;
+		obj_battlebox.boxlerp(global.scx-(global.scx/4), 260, global.scx+(global.scx/4), 420, false);
+	}
+	
+	if state == 0 {
+		global.hide_player_soul = true;
+		global.battle_state = state;
+		obj_battlebox.boxlerp(32, 250, 606, 389, true);
+		obj_playersoul.speed = 0;
+	}
+}
+
+function finished_boxlerp() {
+	global.hide_player_soul = false;
+	obj_battlemenu.block_input = 0;
+	if global.battle_state == 0 {
+		obj_battlemenu.button_select = 1;
+		obj_battlemenu.menu_state = 0;
+	}
+	obj_battlebox.finished = true;
+}

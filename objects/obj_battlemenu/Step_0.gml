@@ -6,7 +6,7 @@ if array_length(global.plr_items) == 0 {
 	item_color = #FF7F27;
 }
 
-if (global.battle_state == 0) {
+if (global.battle_state == 0 and block_input == 0) {
 	if menu_state = 0 {
 		if (global.key_left_pressed) {
 			button_select -= 1;
@@ -73,7 +73,9 @@ if (global.key_cancel_pressed and menu_state == 1) {
 
 if (global.key_confirm_pressed and menu_state == 1) {
 	//if fight_sel {fight_option_state = 2}
-	if act_option_state == 1 {act_option_state = 2}
+	act_option_state++;
+	
+	if act_option_state >= 3 {global.about_to_be_enemy_turn = true}
 }
 
 if (global.key_confirm_pressed and menu_state == 0) {

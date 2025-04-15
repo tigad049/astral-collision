@@ -10,3 +10,5 @@ newy2 = 389;
 
 elapsed = 1;
 yfirst = false;
+
+finished = true;

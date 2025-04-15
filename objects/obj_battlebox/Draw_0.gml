@@ -4,6 +4,7 @@ for (var i = 1; i < 5; i += 1;) {
 }
 
 function boxlerp(x1, y1, x2, y2, _yfirst) {
+	finished = false;
 	oldx1 = _x1;
 	oldy1 = _y1;
 	oldx2 = _x2;
@@ -16,6 +17,10 @@ function boxlerp(x1, y1, x2, y2, _yfirst) {
 	
 	elapsed = 0;
 	yfirst = _yfirst;
+	
+	obj_playersoul.x = lerp(newx1, newx2, 0.5);
+	obj_playersoul.y = lerp(newy1, newy2, 0.5);
+	obj_game.alarm[0] = 200;
 }
 
 if yfirst {
@@ -31,6 +36,9 @@ if yfirst {
 }
 elapsed += (delta_time / 1000000);
 if (elapsed > 1) {elapsed = 1}
+if (elapsed == 1 and finished == false) {
+	obj_game.finished_boxlerp();
+}
 
 // boxlerp(global.scx-(global.scx/4), 260, global.scx+(global.scx/4), 420, false);
 // boxlerp(32, 250, 606, 389, true);

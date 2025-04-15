@@ -37,9 +37,10 @@ item_page = 0;
 // variable to see if user selected mercy or not
 mercy_option_state = 0;
 
+block_input = 0;
+
 // x,y coords for selecting buttons when in a menu
 menu_option_select = [0, 0];
-
 max_menu_option_select = [1, 2];
 
 function set_max_options(_x, _y) {
