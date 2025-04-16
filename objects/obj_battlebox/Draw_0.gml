@@ -35,9 +35,7 @@ if yfirst {
 	_y2 = lerp(oldy2, newy2, clamp((elapsed-0.5)*2, 0, 1));
 }
 if (elapsed > 1) {elapsed = 1} else {elapsed += (delta_time / 1000000)}
-if (elapsed == 1 and finished == false) {
-	obj_game.finished_boxlerp();
-}
+if (elapsed == 1 and finished == false) {obj_game.finished_boxlerp()}
 
 // boxlerp(global.scx-(global.scx/4), 260, global.scx+(global.scx/4), 420, false);
 // boxlerp(32, 250, 606, 389, true);
