@@ -40,6 +40,15 @@ if act_option_state > 0 {
 	}
 }
 
+if item_page > 0 {
+	var number_of_items = array_length(global.plr_items);
+	if item_page == 1 {
+		set_max_options(clamp(number_of_items, 0, 1), clamp(floor(number_of_items/2), 0, 1));
+		draw_text(52, 270, string_concat("   * ", get_item_info(global.plr_items[0], 1)));
+		draw_text(global.scx-12, 270, string_concat("   * ", get_item_info(global.plr_items[1], 1)));
+	}
+}
+
 if mercy_option_state > 0 {
 	if mercy_option_state == 1 {
 		set_max_options(0, 1);

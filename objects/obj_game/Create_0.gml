@@ -48,9 +48,10 @@ function switch_battle_state(state) {
 	if state == 1 {
 		global.hide_player_soul = true;
 		global.battle_state = state;
+		obj_playersoul.reset_movement_state();
 		obj_battlemenu.menu_state = -1;
 		obj_battlemenu.block_input = 1;
-		obj_battlebox.boxlerp(global.scx-(global.scx/4), 260, global.scx+(global.scx/4), 420, false);
+		obj_battlebox.boxlerp(global.scx-(global.scx/4), 230, global.scx+(global.scx/4), 390, false);
 	}
 	
 	if state == 0 {

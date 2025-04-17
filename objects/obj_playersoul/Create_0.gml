@@ -54,3 +54,10 @@ function update_ui_pos() {
 		draw_self();
 	}
 }
+
+function reset_movement_state() {
+	left_held = false;
+	right_held = false;
+	up_held = false;
+	down_held = false;
+}

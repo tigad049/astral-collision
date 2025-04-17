@@ -55,3 +55,7 @@ function check_oob() {
 	if menu_option_select[1] > max_menu_option_select[1] {menu_option_select[1] = 0}
 	obj_playersoul.update_ui_pos();
 }
+
+function get_item_info(_id, infotype) {
+	return global.items[_id][infotype]
+}
