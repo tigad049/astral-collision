@@ -20,7 +20,7 @@ function boxlerp(x1, y1, x2, y2, _yfirst) {
 	
 	obj_playersoul.x = lerp(newx1, newx2, 0.5);
 	obj_playersoul.y = lerp(newy1, newy2, 0.5);
-	obj_game.alarm[0] = 200;
+	// obj_game.alarm[0] = 200;
 }
 
 if yfirst {

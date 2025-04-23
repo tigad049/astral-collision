@@ -71,3 +71,4 @@ function finished_boxlerp() {
 	}
 	obj_battlebox.finished = true;
 }
+alarm[0] = 5;
