@@ -2,6 +2,7 @@ font_add_enable_aa(false);
 global.font_dtm_mono = font_add("DTM-Mono.otf", 20, false, false, 32, 128);
 global.font_dtm_sans = font_add("DTM-Sans.otf", 20, false, false, 32, 128);
 global.font_mnc = font_add("MNC.ttf", 18, false, false, 32, 128);
+global.font_8bw = font_add("8-BIT WONDER.ttf", 10, false, false, 32, 128);
 global.sw = window_get_width();
 global.sh = window_get_height();
 global.scx = global.sw/2;

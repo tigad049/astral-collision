@@ -28,6 +28,7 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"8-BIT WONDER.TTF","CopyToMask":-1,"filePath":"datafiles","name":"8-BIT WONDER.TTF","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ac_splash.png","CopyToMask":-1,"filePath":"datafiles","name":"ac_splash.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"DTM-Mono.otf","CopyToMask":-1,"filePath":"datafiles","name":"DTM-Mono.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"DTM-Sans.otf","CopyToMask":-1,"filePath":"datafiles","name":"DTM-Sans.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
