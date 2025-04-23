@@ -1,2 +1,2 @@
-instance_create_layer(random_range(200, 400), random_range(200, 400), "Instances", obj_bullet);
+instance_create_layer(random_range(bbox1, bbox2), 250, "Instances", obj_bullet);
 alarm[0] = 20;
