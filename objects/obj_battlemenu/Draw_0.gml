@@ -1,7 +1,11 @@
-//draw_sprite(spr_btl_fight, 0, 32, 431);
-//draw_sprite(spr_btl_act, 0, 185, 431);
-//draw_sprite(spr_btl_item, 0, 345, 431);
-//draw_sprite(spr_btl_mercy, 0, 500, 431);
+draw_set_font(global.font_mnc);
+//draw_text(30, 400, "FRISK   LV 1");
+draw_text(30, 400, string_concat(global.plr_name, "   LV ", global.plr_lvl));
+// {player name} + three spaces + LV {lvl}
+
+draw_set_font(global.font_8bw);
+draw_text(243, 402, "H");
+draw_text(243+14, 402, "P");
 
 draw_sprite_ext(spr_btl_fight, fight_sel, 32, 431, 1, 1, 0, fight_color, 1);
 draw_sprite_ext(spr_btl_act, act_sel, 185, 431, 1, 1, 0, act_color, 1);
