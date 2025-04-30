@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_btl_mercy",
   "bboxMode":0,
   "bbox_bottom":42,
