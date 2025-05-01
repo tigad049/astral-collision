@@ -68,3 +68,7 @@ if (global.battle_state == 1) {
 }
 
 update_ui_pos();
+if hurt != prev_hurt and hurt == true {
+	audio_play_sound(snd_hurt, 0, false, 0.5);
+}
+prev_hurt = hurt;

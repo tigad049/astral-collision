@@ -9,6 +9,7 @@ if array_length(global.plr_items) == 0 {
 if (global.battle_state == 0 and block_input == 0) {
 	if menu_state = 0 {
 		if (global.key_left_pressed) {
+			audio_play_sound(snd_movemenu, 0, false, 0.5);
 			button_select -= 1;
 			if (button_select <= 0) {
 				button_select = 4;
@@ -19,6 +20,7 @@ if (global.battle_state == 0 and block_input == 0) {
 		}
 
 		if (global.key_right_pressed) {
+			audio_play_sound(snd_movemenu, 0, false, 0.5);
 			button_select += 1;
 			if (button_select >= 5) {
 				button_select = 1;
@@ -72,6 +74,9 @@ if (global.key_cancel_pressed and menu_state == 1) {
 }
 
 if (global.key_confirm_pressed and menu_state == 1) {
+	if not global.about_to_be_enemy_turn {
+		audio_play_sound(snd_select, 0, false, 0.5);
+	}
 	//if fight_sel {fight_option_state = 2}
 	act_option_state++;
 	
@@ -79,6 +84,7 @@ if (global.key_confirm_pressed and menu_state == 1) {
 }
 
 if (global.key_confirm_pressed and menu_state == 0) {
+	audio_play_sound(snd_select, 0, false, 0.5);
 	menu_state = 1;
 	if fight_sel {fight_option_state = 1}
 	if act_sel {act_option_state = 1}
@@ -89,24 +95,28 @@ if (global.key_confirm_pressed and menu_state == 0) {
 if menu_state == 1 {
 	if global.key_left_pressed {
 		if max_menu_option_select[0] != 0 {
+			audio_play_sound(snd_movemenu, 0, false, 0.5);
 			menu_option_select[0] -= 1;
 		}
 	}
 	
 	if global.key_right_pressed {
 		if max_menu_option_select[0] != 0 {
+			audio_play_sound(snd_movemenu, 0, false, 0.5);
 			menu_option_select[0] += 1;
 		}
 	}
 	
 	if global.key_up_pressed {
 		if max_menu_option_select[1] != 0 {
+			audio_play_sound(snd_movemenu, 0, false, 0.5);
 			menu_option_select[1] -= 1;
 		}
 	}
 	
 	if global.key_down_pressed {
 		if max_menu_option_select[1] != 0 {
+			audio_play_sound(snd_movemenu, 0, false, 0.5);
 			menu_option_select[1] += 1;
 		}
 	}

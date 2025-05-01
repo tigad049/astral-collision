@@ -6,6 +6,7 @@ right_held = false;
 up_held = false;
 down_held = false;
 hurt = false;
+prev_hurt = false;
 
 function update_ui_pos() {
 	if (global.battle_state == 0) {

@@ -1,1 +1,1 @@
-if global.battle_state != 0 {switch_battle_state(0)}
+if (global.battle_state != 0) and (global.plr_dead == false) {switch_battle_state(0)}

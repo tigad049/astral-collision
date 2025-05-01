@@ -21,8 +21,9 @@ global.plr_lvl = 1;
 global.plr_items = [7827, 7827];
 global.plr_death_coords = [0, 0];
 global.plr_dead = false;
+global.about_to_be_enemy_turn = false;
 
-audio_play_sound(mus_astralcollision, 0, true);
+audio_play_sound(mus_astralcollision, 0, true, 0.8);
 //audio_play_sound(mus_gameover, 0, true, 1, 0, 0.925);
 
 global.key_left = keyboard_check(vk_left) || keyboard_check(ord("A"))
@@ -62,6 +63,7 @@ function switch_battle_state(state) {
 	if state == 0 {
 		global.hide_player_soul = true;
 		global.battle_state = state;
+		global.about_to_be_enemy_turn = false;
 		obj_battlebox.boxlerp(32, 250, 606, 389, true);
 		obj_playersoul.speed = 0;
 		obj_bulletman.clear_bullets();
