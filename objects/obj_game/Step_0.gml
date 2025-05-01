@@ -21,3 +21,14 @@ global.key_down_released = keyboard_check_released(vk_down) || keyboard_check_re
 global.key_confirm_released = keyboard_check_released(vk_enter) || keyboard_check_released(ord("Z"))
 global.key_cancel_released = keyboard_check_released(vk_shift) || keyboard_check_released(ord("X"))
 global.key_menu_released = keyboard_check_released(vk_control) || keyboard_check_released(ord("C"))
+
+if (global.plr_hp <= 0) and (global.plr_dead == false) {
+    global.plr_dead = true;
+    if (global.plr_hp < 0) {
+        global.plr_hp = 0;
+    }
+    if object_exists(obj_playersoul) {
+        global.plr_death_coords = [obj_playersoul.x, obj_playersoul.y];
+    }
+    alarm[1] = 2;
+}
