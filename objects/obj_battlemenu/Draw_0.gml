@@ -23,8 +23,10 @@ draw_set_font(global.font_dtm_mono);
 // seems to be just x1+20 and y1+20 for dialogue boxes
 
 if menu_state == 0 {
-	draw_text(52, 270, "* Star reluctantly inches forth!");
-}
+	//draw_text(52, 270, "* Star reluctantly inches forth!");
+	obj_dialogman.set_text_noise(snd_txt2);
+	obj_dialogman.dialog(52, 270, "* Star reluctantly inches forth!", global.font_dtm_mono);
+} else {obj_dialogman.clear()}
 
 if fight_option_state > 0 {
 	if fight_option_state == 1 {

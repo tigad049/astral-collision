@@ -1,1 +1,1 @@
-switch_battle_state(1);
+if global.battle_state != 0 {switch_battle_state(0)}

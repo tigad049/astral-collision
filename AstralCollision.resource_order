@@ -21,6 +21,7 @@
     {"name":"obj_battlemenu","order":3,"path":"objects/obj_battlemenu/obj_battlemenu.yy",},
     {"name":"obj_bullet","order":5,"path":"objects/obj_bullet/obj_bullet.yy",},
     {"name":"obj_bulletman","order":4,"path":"objects/obj_bulletman/obj_bulletman.yy",},
+    {"name":"obj_dialogman","order":8,"path":"objects/obj_dialogman/obj_dialogman.yy",},
     {"name":"obj_game","order":2,"path":"objects/obj_game/obj_game.yy",},
     {"name":"obj_heartpiece","order":7,"path":"objects/obj_heartpiece/obj_heartpiece.yy",},
     {"name":"obj_plrsouldeath","order":6,"path":"objects/obj_plrsouldeath/obj_plrsouldeath.yy",},

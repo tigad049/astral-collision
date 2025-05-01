@@ -64,6 +64,7 @@ function switch_battle_state(state) {
 		global.battle_state = state;
 		obj_battlebox.boxlerp(32, 250, 606, 389, true);
 		obj_playersoul.speed = 0;
+		obj_bulletman.clear_bullets();
 	}
 }
 
@@ -74,6 +75,9 @@ function finished_boxlerp() {
 		obj_battlemenu.button_select = 1;
 		obj_battlemenu.menu_state = 0;
 	}
+	if global.battle_state == 1 {
+		obj_bulletman.alarm[0] = 1;
+		alarm[0] = 30*10;
+	}
 	obj_battlebox.finished = true;
 }
-alarm[0] = 5;
