@@ -48,6 +48,7 @@
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_playersoul","path":"objects/obj_playersoul/obj_playersoul.yy",},},
     {"id":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},},
+    {"id":{"name":"rm_playerdeath","path":"rooms/rm_playerdeath/rm_playerdeath.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"scr_items","path":"scripts/scr_items/scr_items.yy",},},
     {"id":{"name":"mus_astralcollision","path":"sounds/mus_astralcollision/mus_astralcollision.yy",},},
@@ -78,6 +79,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},},
+    {"roomId":{"name":"rm_playerdeath","path":"rooms/rm_playerdeath/rm_playerdeath.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

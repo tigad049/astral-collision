@@ -14,6 +14,7 @@ global.battle_state = 0;
 global.hide_player_soul = false;
 
 global.plr_name = "GASTER";
+global.plr_hp = 20;
 global.plr_hp_max = 20;
 global.plr_lvl = 1;
 global.plr_items = [7827, 7827];

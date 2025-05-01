@@ -4,8 +4,15 @@ draw_text(30, 400, string_concat(global.plr_name, "   LV ", global.plr_lvl));
 // {player name} + three spaces + LV {lvl}
 
 draw_set_font(global.font_8bw);
-draw_text(243, 402, "H");
-draw_text(243+14, 402, "P");
+draw_text(244, 402, "h");
+draw_text(244+14, 402, "p");
+
+draw_rectangle_color(277, 400, 276+(global.plr_hp_max*1.25), 420, c_red, c_red, c_red, c_red, false);
+draw_rectangle_color(277, 400, 276+(global.plr_hp*1.25), 420, c_yellow, c_yellow, c_yellow, c_yellow, false);
+
+var hpdisplay = string_replace_all(string_format(global.plr_hp, 2, 0), " ", "0");
+draw_set_font(global.font_mnc);
+draw_text(291+(global.plr_hp_max*1.25), 400, string_concat(hpdisplay, " / ", global.plr_hp_max));
 
 draw_sprite_ext(spr_btl_fight, fight_sel, 32, 431, 1, 1, 0, fight_color, 1);
 draw_sprite_ext(spr_btl_act, act_sel, 185, 431, 1, 1, 0, act_color, 1);
