@@ -26,7 +26,7 @@ if menu_state == 0 {
 	//draw_text(52, 270, "* Star reluctantly inches forth!");
 	obj_dialogman.set_text_noise(snd_txt2);
 	obj_dialogman.dialog(52, 270, "* Star reluctantly inches forth!", global.font_dtm_mono);
-} else {obj_dialogman.clear()}
+}
 
 if fight_option_state > 0 {
 	if fight_option_state == 1 {
@@ -45,7 +45,8 @@ if act_option_state > 0 {
 		draw_text(global.scx-12, 270, "   * Talk");
 	} else if act_option_state == 3 {
 		global.hide_player_soul = true;
-		draw_text(52, 270, "* bweh");
+		//draw_text(52, 270, "* bweh");
+        obj_dialogman.dialog(52, 270, "* You talk to the dog.\x01\n* She doesn't seem much for\n  conversation...", global.font_dtm_mono);
 		button_select = 0;
 	} else if act_option_state >= 4 {
 		obj_game.switch_battle_state(1);
