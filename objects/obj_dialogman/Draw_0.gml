@@ -2,7 +2,6 @@ draw_set_font(_font)
 if not (i >= string_length(str)) {
 	var strcpy = string_copy(str, 1, i);
 	draw_text(_x, _y, strcpy);
-    test3 = string_char_at(str, i)
     if !(string_char_at(str, i) == "\u0020" or 
         string_char_at(str, i) == "\x01" or 
         string_char_at(str, i) == "\x02") or 
