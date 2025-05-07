@@ -7,3 +7,4 @@ snd = snd_txt2;
 wait = 0;
 waiting = false;
 old_i = 0;
+draw = true;

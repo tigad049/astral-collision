@@ -59,3 +59,5 @@ function check_oob() {
 function get_item_info(_id, infotype) {
 	return global.items[_id][infotype]
 }
+
+in_menus = false;

@@ -47,6 +47,7 @@
     {"id":{"name":"obj_bulletman","path":"objects/obj_bulletman/obj_bulletman.yy",},},
     {"id":{"name":"obj_dialogman","path":"objects/obj_dialogman/obj_dialogman.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
+    {"id":{"name":"obj_gameovertext","path":"objects/obj_gameovertext/obj_gameovertext.yy",},},
     {"id":{"name":"obj_heartpiece","path":"objects/obj_heartpiece/obj_heartpiece.yy",},},
     {"id":{"name":"obj_playersoul","path":"objects/obj_playersoul/obj_playersoul.yy",},},
     {"id":{"name":"obj_plrsouldeath","path":"objects/obj_plrsouldeath/obj_plrsouldeath.yy",},},
