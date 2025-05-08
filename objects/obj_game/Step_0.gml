@@ -27,8 +27,5 @@ if (global.plr_hp <= 0) and (global.plr_dead == false) {
     if (global.plr_hp < 0) {
         global.plr_hp = 0;
     }
-    if object_exists(obj_playersoul) {
-        global.plr_death_coords = [obj_playersoul.x, obj_playersoul.y];
-    }
     alarm[1] = 2;
 }
