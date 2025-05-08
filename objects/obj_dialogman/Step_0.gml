@@ -17,3 +17,16 @@ function clear() {
 	str = "";
 	i = 0;
 }
+
+function set_delay(n) {
+    if n <= 0 {delayed = false} else {delayed = true}
+    delayn = n
+}
+
+function set_halign(h) {
+    _halign = h
+}
+
+function set_valign(v) {
+    _valign = v
+}
