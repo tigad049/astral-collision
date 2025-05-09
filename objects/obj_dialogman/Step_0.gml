@@ -20,13 +20,26 @@ function clear() {
 
 function set_delay(n) {
     if n <= 0 {delayed = false} else {delayed = true}
-    delayn = n
+    delayn = n;
 }
 
 function set_halign(h) {
-    _halign = h
+    _halign = h;
 }
 
 function set_valign(v) {
-    _valign = v
+    _valign = v;
+}
+
+function skip() {
+    i = string_length(str);
+    wait = 0;
+    waiting = false;
+    delayed = false;
+    delayn = 0;
+}
+
+function check_if_finished() {
+    var finished = i >= string_length(str);
+    return finished;
 }

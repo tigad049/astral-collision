@@ -6,6 +6,10 @@ if array_length(global.plr_items) == 0 {
 	item_color = #FF7F27;
 }
 
+if global.key_cancel_pressed {
+    obj_dialogman.skip();
+}
+
 if (global.battle_state == 0 and block_input == 0) {
 	if menu_state = 0 {
 		if (global.key_left_pressed) {
@@ -77,10 +81,13 @@ if (global.key_confirm_pressed and menu_state == 1) {
 	if not global.about_to_be_enemy_turn {
 		audio_play_sound(snd_select, 0, false, 0.5);
 	}
-	//if fight_sel {fight_option_state = 2}
-	act_option_state++;
-	
-	if act_option_state >= 3 {global.about_to_be_enemy_turn = true}
+    if !in_menus {
+        if obj_dialogman.check_if_finished() {
+            advance_menu_option();
+        }
+    } else {
+        advance_menu_option();
+    }
 }
 
 if (global.key_confirm_pressed and menu_state == 0) {

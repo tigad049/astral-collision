@@ -38,6 +38,7 @@ item_page = 0;
 mercy_option_state = 0;
 
 block_input = 0;
+in_menus = false;
 
 // x,y coords for selecting buttons when in a menu
 menu_option_select = [0, 0];
@@ -60,4 +61,9 @@ function get_item_info(_id, infotype) {
 	return global.items[_id][infotype]
 }
 
-in_menus = false;
+function advance_menu_option() {
+    if (fight_option_state >= 1) {fight_option_state++;}
+	if (act_option_state >= 1) {act_option_state++; if act_option_state >= 3 {global.about_to_be_enemy_turn = true}}
+	if item_sel {item_page++;}
+	if (mercy_option_state >= 1) {mercy_option_state++;}
+}
