@@ -9,3 +9,4 @@ messages = [
 ]
 state = 0;
 disappear = false;
+audio_sound_gain(mus_gameover, 1, 0);
