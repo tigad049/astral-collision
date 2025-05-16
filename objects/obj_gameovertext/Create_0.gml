@@ -1,11 +1,11 @@
 alpha = 0;
 alarm[0] = 50;
 messages = [
-    "You cannot give \nup just yet...",
-    "Our fate rests \nupon you...",
-    "Don't lose hope!",
-    "You're going to \nbe alright!",
-    "It cannot end \nnow!"
+    gettext("game_over_1"),
+    gettext("game_over_2"),
+    gettext("game_over_3"),
+    gettext("game_over_4"),
+    gettext("game_over_5")
 ]
 state = 0;
 disappear = false;

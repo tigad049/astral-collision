@@ -25,7 +25,7 @@ draw_set_font(global.font_dtm_mono);
 if menu_state == 0 {
 	//draw_text(52, 270, "* Star reluctantly inches forth!");
 	obj_dialogman.set_text_noise(snd_txt2);
-	obj_dialogman.dialog(52, 270, "* Star reluctantly inches forth!", global.font_dtm_mono);
+	obj_dialogman.dialog(52, 270, gettext("btl_start"), global.font_dtm_mono);
 }
 
 if in_menus {
@@ -36,7 +36,7 @@ if fight_option_state > 0 {
     in_menus = true;
 	if fight_option_state == 1 {
 		set_max_options(0, 0);
-		draw_text(52, 270, "   * Star");
+		draw_text(52, 270, gettext("btl_ui_name"));
 	}
 }
 
@@ -44,15 +44,22 @@ if act_option_state > 0 {
 	if act_option_state == 1 {
         in_menus = true;
 		set_max_options(0, 0);
-		draw_text(52, 270, "   * Star");
+		draw_text(52, 270, gettext("btl_ui_name"));
 	} else if act_option_state == 2 {
 		set_max_options(1, 0);
-		draw_text(52, 270, "   * Check");
-		draw_text(global.scx-12, 270, "   * Talk");
+		draw_text(52, 270, gettext("btl_ui_check"));
+		draw_text(global.scx-12, 270, gettext("btl_ui_talk"));
 	} else if act_option_state == 3 {
         in_menus = false;
 		global.hide_player_soul = true;
-        obj_dialogman.dialog(52, 270, "* You talk to the dog.\x01\n* She doesn't seem much for\n  conversation...", global.font_dtm_mono);
+        if menu_option_select[0] == 0 {
+            // obj_dialogman.dialog(52, 270, "* STAR CHASE\n* This dog doesn't look like\n  she's from here...", global.font_dtm_mono);
+            obj_dialogman.dialog(52, 270, gettext("btl_check"), global.font_dtm_mono);
+        }
+        
+        if menu_option_select[0] == 1 {
+            obj_dialogman.dialog(52, 270, gettext("btl_talk_1"), global.font_dtm_mono);
+        }
 		button_select = 0;
 	} else if act_option_state >= 4 {
 		obj_game.switch_battle_state(1);
@@ -74,8 +81,7 @@ if item_page > 0 {
 if mercy_option_state > 0 {
     in_menus = true;
 	if mercy_option_state == 1 {
-		set_max_options(0, 1);
-		draw_text(52, 270, "   * Spare");
-		draw_text(52, 302, "   * Flee");
+		set_max_options(0, 0);
+		draw_text(52, 270, gettext("btl_ui_spare"));
 	}
 }

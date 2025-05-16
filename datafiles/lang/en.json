@@ -1,0 +1,24 @@
+{
+	"btl_start": "* Star reluctantly inches forth!",
+	"btl_check": "* STAR CHASE\n* This dog doesn't look like\n  she's from here...",
+	"btl_talk_1": "* You try to talk to Star,\n  but she's too panicked over\n  the fight...",
+	"game_over_1": "You cannot give \nup just yet...",
+	"game_over_2": "Our fate rests \nupon you...",
+	"game_over_3": "Don't lose hope!",
+	"game_over_4": "You're going to \nbe alright!",
+	"game_over_5": "It cannot end \nnow!",
+	"game_over_6": "{plr}!{x03}\nStay determined...",
+	"btl_ui_name": "   * Star",
+	"btl_ui_check": "   * Check",
+	"btl_ui_talk": "   * Talk",
+	"btl_ui_spare": "   * Spare",
+
+	"diag_0": "* S-STOP!! Who goes there?!",
+	"diag_neutral_1": "* Wait...",
+	"diag_neutral_2": "* I've been told by the others\n  that a human is around\n  here...",
+	"diag_neutral_3": "* ...and you look awfully like one!",
+
+	"diag_nomercy_1": "* Y-You...",
+	"diag_nomercy_2": "* I haven't heard from the others...{x01}\n* A-And... it's incredibly\n  dusty...",
+	"diag_nomercy_3": "* ...W-What the heck did you do?!",
+}
