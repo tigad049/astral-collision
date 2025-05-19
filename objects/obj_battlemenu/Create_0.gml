@@ -44,6 +44,9 @@ in_menus = false;
 menu_option_select = [0, 0];
 max_menu_option_select = [1, 2];
 
+qte_spawned = false;
+force_redraw = false;
+
 function set_max_options(_x, _y) {
 	max_menu_option_select = [_x, _y];
 	check_oob();

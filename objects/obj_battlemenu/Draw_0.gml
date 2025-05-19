@@ -22,10 +22,12 @@ draw_sprite_ext(spr_btl_mercy, mercy_sel, 500, 431, 1, 1, 0, mercy_color, 1);
 draw_set_font(global.font_dtm_mono);
 // seems to be just x1+20 and y1+20 for dialogue boxes
 
-if menu_state == 0 {
+if (menu_state == 0) or (force_redraw) {
 	//draw_text(52, 270, "* Star reluctantly inches forth!");
 	obj_dialogman.set_text_noise(snd_txt2);
 	obj_dialogman.dialog(52, 270, gettext("btl_start"), global.font_dtm_mono);
+    qte_spawned = false;
+    force_redraw = false;
 }
 
 if in_menus {
@@ -37,7 +39,14 @@ if fight_option_state > 0 {
 	if fight_option_state == 1 {
 		set_max_options(0, 0);
 		draw_text(52, 270, gettext("btl_ui_name"));
-	}
+	} else if fight_option_state == 2 {
+        global.about_to_be_enemy_turn = true;
+        global.hide_player_soul = true;
+        if qte_spawned == false {
+            instance_create_depth(global.scx, global.scy+80, 200, obj_fightqte);
+            qte_spawned = true;
+        }
+    }
 }
 
 if act_option_state > 0 {

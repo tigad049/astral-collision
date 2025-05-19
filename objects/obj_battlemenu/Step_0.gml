@@ -69,7 +69,7 @@ if (global.battle_state == 0 and block_input == 0) {
 	button_select = 0;
 }
 
-if (global.key_cancel_pressed and menu_state == 1) {
+if (global.key_cancel_pressed and menu_state == 1) and (block_input == 0) {
 	if fight_sel {fight_option_state -= 1}
 	if act_sel {act_option_state -= 1}
 	if item_sel {item_page = 0}
@@ -90,7 +90,7 @@ if (global.key_confirm_pressed and menu_state == 1) {
     }
 }
 
-if (global.key_confirm_pressed and menu_state == 0) {
+if (global.key_confirm_pressed and menu_state == 0) and (block_input == 0) {
 	audio_play_sound(snd_select, 0, false, 0.5);
 	menu_state = 1;
 	if fight_sel {fight_option_state = 1}
@@ -99,7 +99,7 @@ if (global.key_confirm_pressed and menu_state == 0) {
 	if mercy_sel {mercy_option_state = 1}
 }
 
-if menu_state == 1 {
+if (menu_state == 1) and (block_input == 0) {
 	if global.key_left_pressed {
 		if max_menu_option_select[0] != 0 {
 			audio_play_sound(snd_movemenu, 0, false, 0.5);
