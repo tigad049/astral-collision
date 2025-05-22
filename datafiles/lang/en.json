@@ -1,14 +1,19 @@
 {
 	"btl_start": "* Star reluctantly inches forth!",
-	"btl_check": "* STAR CHASE\n* This dog doesn't look like\n  she's from here...",
-	"btl_talk_1": "* You try to talk to Star,\n  but she's too panicked over\n  the fight...", 
-    "btl_nomercy_1": "* Not necessary.",
+	"btl_check": "* STAR CHASE - ATK 12 DEF 7\n* A recruit of the Snowdin Canine Unit.",
+	"btl_talk_1": "* You try to talk to Star,\n  but she's too panicked over\n  the fight...",
+	"btl_item_stick": "* You throw the stick.{x01}\n* Star looks at you very confusingly.",
+	"btl_stardiag_stick": "Really? What\ndid you think\nthat would do?",
+	"btl_flavor_1": "* Smells like static electricity.",
+	"btl_flavor_2": "* Star is having trouble holding\n  up her hammer.",
+
     "game_over_1": "You cannot give \nup just yet...",
 	"game_over_2": "Our fate rests \nupon you...",
 	"game_over_3": "Don't lose hope!",
 	"game_over_4": "You're going to \nbe alright!",
 	"game_over_5": "It cannot end \nnow!",
 	"game_over_6": "{plr}!{x03}\nStay determined...",
+	
 	"btl_ui_name": "   * Star",
 	"btl_ui_check": "   * Check",
 	"btl_ui_talk": "   * Talk",
