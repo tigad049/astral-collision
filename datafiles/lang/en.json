@@ -1,8 +1,8 @@
 {
 	"btl_start": "* Star reluctantly inches forth!",
 	"btl_check": "* STAR CHASE\n* This dog doesn't look like\n  she's from here...",
-	"btl_talk_1": "* You try to talk to Star,\n  but she's too panicked over\n  the fight...",
-	"btl_nomercy_1": "* Not necessary.",
+	"btl_talk_1": "* You try to talk to Star,\n  but she's too panicked over\n  the fight...", 
+    "btl_nomercy_1": "* Not necessary.",
     "game_over_1": "You cannot give \nup just yet...",
 	"game_over_2": "Our fate rests \nupon you...",
 	"game_over_3": "Don't lose hope!",

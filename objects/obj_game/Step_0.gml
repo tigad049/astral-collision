@@ -29,3 +29,7 @@ if (global.plr_hp <= 0) and (global.plr_dead == false) {
     }
     alarm[1] = 2;
 }
+
+if keyboard_check_pressed(vk_f7) {
+    game_restart();
+}

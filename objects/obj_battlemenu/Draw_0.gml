@@ -39,6 +39,9 @@ if fight_option_state > 0 {
 	if fight_option_state == 1 {
 		set_max_options(0, 0);
 		draw_text(52, 270, gettext("btl_ui_name"));
+        // 101 x 17
+        draw_rectangle_color(270, 283, 371, 299, c_red, c_red, c_red, c_red, false);
+        draw_rectangle_color(270, 283, 270+(101*(global.enemy_hp/global.enemy_hp_max)), 299, c_lime, c_lime, c_lime, c_lime, false);
 	} else if fight_option_state == 2 {
         global.about_to_be_enemy_turn = true;
         global.hide_player_soul = true;
@@ -60,6 +63,7 @@ if act_option_state > 0 {
 		draw_text(global.scx-12, 270, gettext("btl_ui_talk"));
 	} else if act_option_state == 3 {
         in_menus = false;
+        block_input = 1;
 		global.hide_player_soul = true;
         if menu_option_select[0] == 0 {
             // obj_dialogman.dialog(52, 270, "* STAR CHASE\n* This dog doesn't look like\n  she's from here...", global.font_dtm_mono);

@@ -4,6 +4,7 @@ global.font_dtm_sans = font_add("fonts/DTM-Sans.otf", 20, false, false, 32, 128)
 global.font_mnc = font_add("fonts/MNC.ttf", 18, false, false, 32, 128);
 global.font_8bw = font_add("fonts/8-BIT WONDER.ttf", 10, false, false, 32, 128);
 global.font_8bw_big = font_add("fonts/8-BIT WONDER.ttf", 76, false, false, 32, 128);
+global.font_hachicro = font_add("fonts/Hachicro.ttf", 30, false, false, 32, 128);
 global.sw = window_get_width();
 global.sh = window_get_height();
 global.scx = global.sw/2;
@@ -22,6 +23,9 @@ global.plr_items = [7827, 7827];
 global.plr_death_coords = [0, 0];
 global.plr_dead = false;
 global.about_to_be_enemy_turn = false;
+
+global.enemy_hp = 100;
+global.enemy_hp_max = 100;
 
 audio_play_sound(mus_astralcollision, 0, true, 0.8);
 //audio_play_sound(mus_gameover, 0, true, 1, 0, 0.925);

@@ -3,3 +3,6 @@ with bar {
     image_speed = 0;
     hspeed = 15;
 }
+
+should_draw_number = false;
+qte_done = false;
