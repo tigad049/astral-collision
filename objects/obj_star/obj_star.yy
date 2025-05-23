@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fightqte_dmg",
+  "%Name":"obj_star",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_fightqte_dmg",
+  "name":"obj_star",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_star_placeholder",
+    "path":"sprites/spr_star_placeholder/spr_star_placeholder.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

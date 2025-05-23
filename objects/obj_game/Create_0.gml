@@ -88,3 +88,5 @@ function finished_boxlerp() {
 	}
 	obj_battlebox.finished = true;
 }
+
+spawned_star = false;

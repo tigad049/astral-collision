@@ -4,7 +4,7 @@ if object_exists(obj_fightqte_bar) and not qte_done {
             hspeed = 0;
             image_speed = 0.4;
             audio_play_sound(snd_laz, 0, false);
-            var slice = instance_create_depth(global.scx, global.scy, 100, obj_fightqte_strike);
+            var slice = instance_create_depth(obj_star.x, obj_star.y, 0, obj_fightqte_strike);
             with slice {
                 image_speed = 0.25;
                 image_xscale = 2;

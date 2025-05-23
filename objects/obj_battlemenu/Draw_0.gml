@@ -41,7 +41,7 @@ if fight_option_state > 0 {
 		draw_text(52, 270, gettext("btl_ui_name"));
         // 101 x 17
         draw_rectangle_color(270, 283, 371, 299, c_red, c_red, c_red, c_red, false);
-        draw_rectangle_color(270, 283, 270+(101*(global.enemy_hp/global.enemy_hp_max)), 299, c_lime, c_lime, c_lime, c_lime, false);
+        draw_rectangle_color(270, 283, 270+(101*(obj_star.hp/obj_star.max_hp)), 299, c_lime, c_lime, c_lime, c_lime, false);
 	} else if fight_option_state == 2 {
         global.about_to_be_enemy_turn = true;
         global.hide_player_soul = true;

@@ -33,3 +33,9 @@ if (global.plr_hp <= 0) and (global.plr_dead == false) {
 if keyboard_check_pressed(vk_f7) {
     game_restart();
 }
+
+if (room == rm_battle) and (spawned_star == false) {
+    var star = instance_create_depth(global.scx, 140, 100, obj_star);
+    star.image_speed = 0;
+    spawned_star = true;
+}
