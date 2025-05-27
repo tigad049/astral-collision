@@ -15,7 +15,7 @@ if global.battle_state == 1 {
         if xx == -1 {
             warning.flip = true;
         }
-        alarm[0] = 60;
+        alarm[0] = 50;
     }
     
     if pattern == 2 { // lightning attack

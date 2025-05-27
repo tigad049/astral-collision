@@ -1,3 +1,3 @@
-alarm[0] = 20;
-image_speed = 0.25;
+alarm[0] = 15;
+image_speed = 0.33;
 flip = false;
