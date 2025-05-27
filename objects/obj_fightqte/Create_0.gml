@@ -6,3 +6,5 @@ with bar {
 
 should_draw_number = false;
 qte_done = false;
+dmg_dealt = 0;
+failed = false;
