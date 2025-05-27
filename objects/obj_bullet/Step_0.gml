@@ -12,7 +12,6 @@ if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_player
     if obj_playersoul.hurt == false {
         obj_playersoul.hurt = true;
         obj_playersoul.alarm[0] = 90;
-        show_debug_message("player is hurt");
         global.plr_hp -= dmg;
     }
 }

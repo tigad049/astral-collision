@@ -61,8 +61,9 @@ function switch_battle_state(state) {
 		obj_playersoul.reset_movement_state();
 		obj_battlemenu.menu_state = -1;
 		obj_battlemenu.block_input = 1;
-		obj_battlebox.boxlerp(global.scx-(global.scx/4), 230, global.scx+(global.scx/4), 390, false);
-	}
+		obj_bulletman.random_pattern();
+        
+    }
 	
 	if state == 0 {
 		global.hide_player_soul = true;
@@ -84,7 +85,6 @@ function finished_boxlerp() {
 	}
 	if global.battle_state == 1 {
 		obj_bulletman.alarm[0] = 1;
-        obj_bulletman.random_pattern();
 		alarm[0] = 30*10;
 	}
 	obj_battlebox.finished = true;
