@@ -81,7 +81,10 @@ function finished_boxlerp() {
 	if global.battle_state == 0 {
 		obj_battlemenu.button_select = 1;
 		obj_battlemenu.menu_state = 0;
-        obj_battlemenu.force_redraw = true;
+        // obj_battlemenu.force_redraw = true;
+        obj_battlemenu.in_menus = false;
+        obj_battlemenu.new_flavor_text();
+        obj_battlemenu.first_encounter = false;
 	}
 	if global.battle_state == 1 {
 		obj_bulletman.alarm[0] = 1;

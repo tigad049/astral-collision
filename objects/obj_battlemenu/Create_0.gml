@@ -46,6 +46,8 @@ max_menu_option_select = [1, 2];
 
 qte_spawned = false;
 force_redraw = false;
+first_encounter = true;
+flavor = "";
 
 function set_max_options(_x, _y) {
 	max_menu_option_select = [_x, _y];
@@ -69,4 +71,8 @@ function advance_menu_option() {
 	if (act_option_state >= 1) {act_option_state++; if act_option_state >= 3 {global.about_to_be_enemy_turn = true}}
 	if item_sel {item_page++;}
 	if (mercy_option_state >= 1) {mercy_option_state++;}
+}
+
+function new_flavor_text() {
+    flavor = string_concat("btl_flavor_", irandom_range(1, 2))
 }

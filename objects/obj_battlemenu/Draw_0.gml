@@ -22,12 +22,15 @@ draw_sprite_ext(spr_btl_mercy, mercy_sel, 500, 431, 1, 1, 0, mercy_color, 1);
 draw_set_font(global.font_dtm_mono);
 // seems to be just x1+20 and y1+20 for dialogue boxes
 
-if (menu_state == 0) or (force_redraw) {
+if (menu_state == 0) {
 	//draw_text(52, 270, "* Star reluctantly inches forth!");
 	obj_dialogman.set_text_noise(snd_txt2);
-	obj_dialogman.dialog(52, 270, gettext("btl_start"), global.font_dtm_mono);
+    if first_encounter {
+        obj_dialogman.dialog(52, 270, gettext("btl_start"), global.font_dtm_mono);
+    } else {
+        obj_dialogman.dialog(52, 270, gettext(flavor), global.font_dtm_mono);
+    }
     qte_spawned = false;
-    force_redraw = false;
 }
 
 if in_menus {
