@@ -48,6 +48,7 @@ qte_spawned = false;
 force_redraw = false;
 first_encounter = true;
 flavor = "";
+talkask = "";
 
 function set_max_options(_x, _y) {
 	max_menu_option_select = [_x, _y];
@@ -76,3 +77,10 @@ function advance_menu_option() {
 function new_flavor_text() {
     flavor = string_concat("btl_flavor_", irandom_range(1, 2))
 }
+
+function new_ask_text() {
+    talkask = string_concat("btl_talk_", irandom_range(2, 3))
+}
+
+new_flavor_text();
+new_ask_text();

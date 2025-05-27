@@ -15,6 +15,9 @@ global.battle_state = 0;
 
 global.hide_player_soul = false;
 
+global.spareable = false;
+global.progress = 0;
+
 global.plr_name = "GASTER";
 global.plr_hp = 20;
 global.plr_hp_max = 20;
@@ -84,6 +87,7 @@ function finished_boxlerp() {
         // obj_battlemenu.force_redraw = true;
         obj_battlemenu.in_menus = false;
         obj_battlemenu.new_flavor_text();
+        obj_battlemenu.new_ask_text();
         obj_battlemenu.first_encounter = false;
 	}
 	if global.battle_state == 1 {

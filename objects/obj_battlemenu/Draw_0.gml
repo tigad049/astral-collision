@@ -61,23 +61,46 @@ if act_option_state > 0 {
 		set_max_options(0, 0);
 		draw_text(52, 270, gettext("btl_ui_name"));
 	} else if act_option_state == 2 {
-		set_max_options(1, 0);
-		draw_text(52, 270, gettext("btl_ui_check"));
-		draw_text(global.scx-12, 270, gettext("btl_ui_talk"));
+		set_max_options(1, 1);
+		draw_text(52, 270, string_concat(gettext("btl_ui_check"), "\n", gettext("btl_ui_reason")));
+		draw_text(global.scx-12, 270, string_concat(gettext("btl_ui_talk"), "\n", gettext("btl_ui_pet")));
 	} else if act_option_state == 3 {
         in_menus = false;
         block_input = 1;
 		global.hide_player_soul = true;
-        if menu_option_select[0] == 0 {
+        if menu_option_select[0] == 0 and menu_option_select[1] == 0 {
             // obj_dialogman.dialog(52, 270, "* STAR CHASE\n* This dog doesn't look like\n  she's from here...", global.font_dtm_mono);
             obj_dialogman.dialog(52, 270, gettext("btl_check"), global.font_dtm_mono);
         }
         
-        if menu_option_select[0] == 1 {
-            obj_dialogman.dialog(52, 270, gettext("btl_talk_1"), global.font_dtm_mono);
+        if menu_option_select[0] == 1 and menu_option_select[1] == 0 {
+            if global.progress == 0 {
+                obj_dialogman.dialog(52, 270, gettext("btl_talk_1"), global.font_dtm_mono);
+            } else {
+                obj_dialogman.dialog(52, 270, gettext(talkask), global.font_dtm_mono);
+            }
         }
-		button_select = 0;
+        
+        if menu_option_select[0] == 0 and menu_option_select[1] == 1 {
+            if global.progress == 0 {
+                obj_dialogman.dialog(52, 270, gettext("btl_reason_1"), global.font_dtm_mono);
+            } else {
+                obj_dialogman.dialog(52, 270, gettext("btl_reason_2"), global.font_dtm_mono);
+            }
+        }
+        
+        if menu_option_select[0] == 1 and menu_option_select[1] == 1 {
+            if global.progress == 2 {
+                obj_dialogman.dialog(52, 270, gettext("btl_pet_2"), global.font_dtm_mono);
+            } else {
+                obj_dialogman.dialog(52, 270, gettext("btl_pet_1"), global.font_dtm_mono);
+            }
+        }
+ 		button_select = 0;
 	} else if act_option_state >= 4 {
+        if menu_option_select[0] == 0 and menu_option_select[1] == 1 and global.progress == 0 {
+            global.progress = 1;
+        }
 		obj_game.switch_battle_state(1);
 		act_option_state = 0;
         in_menus = true;
