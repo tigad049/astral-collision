@@ -10,8 +10,7 @@ function clear_bullets() {
 
 pattern = 0;
 function random_pattern() {
-    //pattern = irandom(2);
-    pattern = 1;
+    pattern = irandom(1);
     
     if pattern == 0 {
         obj_battlebox.boxlerp(global.scx-(global.scx/4), 230, global.scx+(global.scx/4), 390, false);
@@ -23,6 +22,7 @@ function random_pattern() {
     }
     
     if pattern == 2 {
-        obj_battlebox.boxlerp(global.scx-(global.scx/3), 230, global.scx+(global.scx/3), 350, false);
+        obj_battlebox.boxlerp(global.scx-(128), 370-128, global.scx+(128), 370, false);
+        obj_playersoul.y = 320;
     }
 }
