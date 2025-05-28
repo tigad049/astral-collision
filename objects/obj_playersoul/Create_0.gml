@@ -71,7 +71,7 @@ function get_hurt(dmg) {
         global.plr_hp -= dmg;
         image_speed = 1;
         image_index = 1;
-        alarm[0] = 90;
+        alarm[0] = 30;
         screenshake(0, 1, 0.2);
     }
 }

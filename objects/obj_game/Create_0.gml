@@ -18,11 +18,11 @@ global.hide_player_soul = false;
 global.spareable = false;
 global.progress = 0;
 
-global.plr_name = "GASTER";
+global.plr_name = "CHARA";
 global.plr_hp = 20;
 global.plr_hp_max = 20;
 global.plr_lvl = 1;
-global.plr_items = [7827, 7827];
+global.plr_items = [];
 global.plr_death_coords = [0, 0];
 global.plr_dead = false;
 global.about_to_be_enemy_turn = false;

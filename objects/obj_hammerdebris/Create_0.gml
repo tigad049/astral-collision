@@ -1,2 +1,2 @@
 hurt = true;
-dmg = 4;
+dmg = 2;

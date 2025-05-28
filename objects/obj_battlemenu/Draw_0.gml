@@ -112,8 +112,10 @@ if item_page > 0 {
 	var number_of_items = array_length(global.plr_items);
 	if item_page == 1 {
 		set_max_options(clamp(number_of_items, 0, 1), clamp(floor(number_of_items/2), 0, 1));
-		draw_text(52, 270, string_concat("   * ", get_item_info(global.plr_items[0], 1)));
-		draw_text(global.scx-12, 270, string_concat("   * ", get_item_info(global.plr_items[1], 1)));
+		draw_text(52, 270, string_concat("   * ", get_item_info(global.plr_items[0], 0)));
+        draw_text(52, 270, string_concat("   * ", get_item_info(global.plr_items[2], 0)));
+		draw_text(global.scx-12, 270, string_concat("   * ", get_item_info(global.plr_items[1], 0)));
+        draw_text(52, 270, string_concat("   * ", get_item_info(global.plr_items[3], 0)));
 	}
 }
 
