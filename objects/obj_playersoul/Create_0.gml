@@ -72,5 +72,6 @@ function get_hurt(dmg) {
         image_speed = 1;
         image_index = 1;
         alarm[0] = 90;
+        screenshake(0, 1, 0.2);
     }
 }

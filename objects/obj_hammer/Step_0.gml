@@ -1,6 +1,7 @@
 if y >= 370-32 {
     direction = 90;
     hurt = false;
+    screenshake(1, 1, 0.1);
 }
 
 if direction == 90 and image_alpha == 1 {
@@ -27,6 +28,6 @@ if direction == 90 {
     image_alpha -= 0.08;
 }
 
-if image_alpha == 0 {
+if image_alpha <= 0 {
     instance_destroy();
 }
