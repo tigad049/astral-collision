@@ -75,6 +75,7 @@
     {"id":{"name":"snd_bell","path":"sounds/snd_bell/snd_bell.yy",},},
     {"id":{"name":"snd_break1","path":"sounds/snd_break1/snd_break1.yy",},},
     {"id":{"name":"snd_break2","path":"sounds/snd_break2/snd_break2.yy",},},
+    {"id":{"name":"snd_hammerhit","path":"sounds/snd_hammerhit/snd_hammerhit.yy",},},
     {"id":{"name":"snd_heal","path":"sounds/snd_heal/snd_heal.yy",},},
     {"id":{"name":"snd_hurt","path":"sounds/snd_hurt/snd_hurt.yy",},},
     {"id":{"name":"snd_laz","path":"sounds/snd_laz/snd_laz.yy",},},

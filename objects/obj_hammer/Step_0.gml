@@ -2,6 +2,7 @@ if y >= 370-32 {
     direction = 90;
     hurt = false;
     screenshake(1, 1, 0.1);
+    audio_play_sound(snd_hammerhit, 0, false, 0.7);
 }
 
 if direction == 90 and image_alpha == 1 {

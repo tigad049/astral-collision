@@ -2,6 +2,10 @@ if image_alpha >= 1 {
     image_alpha = 1;
     speed = 5;
     hurt = true;
+    if not playsnd {
+        audio_play_sound(snd_noise, 0, false, 0.7);
+        playsnd = true;
+    }
 } else {
     image_alpha += 0.1;
     hurt = false;

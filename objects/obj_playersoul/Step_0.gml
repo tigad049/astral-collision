@@ -78,3 +78,7 @@ if global.battle_state == 0 {
     image_speed = 0;
     image_index = 0;
 }
+
+if _speed >= 4 {
+    _speed = 4;
+}
