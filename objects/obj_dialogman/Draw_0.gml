@@ -1,6 +1,7 @@
 draw_set_font(_font)
 draw_set_halign(_halign)
 draw_set_valign(_valign)
+draw_set_color(col)
 if not (i >= string_length(str)) {
     if ((string_char_at(str, i) == "\x02") and !waiting) {
         wait = 60;

@@ -1,5 +1,6 @@
 font_add_enable_aa(false);
 global.font_dtm_mono = font_add("fonts/DTM-Mono.otf", 20, false, false, 32, 128);
+global.font_dtm_mono_small = font_add("fonts/DTM-Mono.otf", 10, false, false, 32, 128);
 global.font_dtm_sans = font_add("fonts/DTM-Sans.otf", 20, false, false, 32, 128);
 global.font_mnc = font_add("fonts/MNC.ttf", 18, false, false, 32, 128);
 global.font_8bw = font_add("fonts/8-BIT WONDER.ttf", 10, false, false, 32, 128);
@@ -65,6 +66,7 @@ function switch_battle_state(state) {
 		obj_battlemenu.menu_state = -1;
 		obj_battlemenu.block_input = 1;
 		obj_bulletman.random_pattern();
+        obj_dialogman.clear();
         
     }
 	
@@ -90,10 +92,9 @@ function finished_boxlerp() {
         obj_battlemenu.new_ask_text();
         obj_battlemenu.first_encounter = false;
 	}
-	if global.battle_state == 1 {
-		obj_bulletman.alarm[0] = 1;
-		alarm[0] = 30*10;
-	}
+    if global.battle_state == 1 {
+        instance_create_depth(obj_star.x + 100, obj_star.y, 100, obj_speechbubble);
+    }
 	obj_battlebox.finished = true;
 }
 

@@ -31,6 +31,10 @@ function set_valign(v) {
     _valign = v;
 }
 
+function set_color(c) {
+    col = c;
+}
+
 function skip() {
     i = string_length(str);
     wait = 0;

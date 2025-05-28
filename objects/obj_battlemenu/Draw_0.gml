@@ -25,6 +25,7 @@ draw_set_font(global.font_dtm_mono);
 if (menu_state == 0) {
 	//draw_text(52, 270, "* Star reluctantly inches forth!");
 	obj_dialogman.set_text_noise(snd_txt2);
+    obj_dialogman.set_color(c_white);
     if first_encounter {
         obj_dialogman.dialog(52, 270, gettext("btl_start"), global.font_dtm_mono);
     } else {
@@ -33,8 +34,14 @@ if (menu_state == 0) {
     qte_spawned = false;
 }
 
-if in_menus {
-    obj_dialogman.clear();
+if global.battle_state == 0 {
+    if in_menus {
+        obj_dialogman.clear();
+    }
+} else if global.battle_state == 1 {
+    if not object_exists(obj_speechbubble) {
+        obj_dialogman.clear();
+    }
 }
 
 if fight_option_state > 0 {

@@ -12,3 +12,4 @@ delayed = false;
 delayn = 0;
 _halign = fa_left;
 _valign = fa_top;
+col = c_white;
