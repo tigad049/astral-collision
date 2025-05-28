@@ -72,3 +72,9 @@ if hurt != prev_hurt and hurt == true {
 	audio_play_sound(snd_hurt, 0, false, 0.5);
 }
 prev_hurt = hurt;
+if global.hide_player_soul {image_alpha = 0} else {image_alpha = 1}
+    
+if global.battle_state == 0 {
+    image_speed = 0;
+    image_index = 0;
+}

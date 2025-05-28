@@ -1,10 +1,10 @@
 gpu_set_blendenable(false);
 gpu_set_colorwriteenable(false,false,false,true);
 draw_set_alpha(0);
-draw_rectangle(0,0, room_width,room_height, false);
+draw_rectangle(0, 0, room_width, room_height, false);
 
 draw_set_alpha(image_alpha);
-draw_rectangle(obj_battlebox._x1, obj_battlebox._y1, obj_battlebox._x2, obj_battlebox._y2, false);
+draw_rectangle(obj_battlebox._x1+4, obj_battlebox._y1+4, obj_battlebox._x2-4, obj_battlebox._y2-4, false);
 gpu_set_blendenable(true);
 gpu_set_colorwriteenable(true,true,true,true);
 

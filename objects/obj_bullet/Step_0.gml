@@ -9,9 +9,5 @@ if image_alpha >= 1 {
 }
 
 if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_playersoul, true, false) and hurt == true) {
-    if obj_playersoul.hurt == false {
-        obj_playersoul.hurt = true;
-        obj_playersoul.alarm[0] = 90;
-        global.plr_hp -= dmg;
-    }
+    obj_playersoul.get_hurt(dmg);
 }

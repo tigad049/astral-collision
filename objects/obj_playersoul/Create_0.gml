@@ -7,6 +7,7 @@ up_held = false;
 down_held = false;
 hurt = false;
 prev_hurt = false;
+image_speed = 0;
 
 function update_ui_pos() {
 	if (global.battle_state == 0) {
@@ -62,4 +63,14 @@ function reset_movement_state() {
 	right_held = false;
 	up_held = false;
 	down_held = false;
+}
+
+function get_hurt(dmg) {
+    if not hurt {
+        hurt = true;
+        global.plr_hp -= dmg;
+        image_speed = 1;
+        image_index = 1;
+        alarm[0] = 90;
+    }
 }
