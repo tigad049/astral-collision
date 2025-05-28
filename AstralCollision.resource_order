@@ -63,6 +63,7 @@
     {"name":"spr_heartpieces","order":9,"path":"sprites/spr_heartpieces/spr_heartpieces.yy",},
     {"name":"spr_platform","order":1,"path":"sprites/spr_platform/spr_platform.yy",},
     {"name":"spr_star_placeholder","order":13,"path":"sprites/spr_star_placeholder/spr_star_placeholder.yy",},
+    {"name":"spr_star","order":16,"path":"sprites/spr_star/spr_star.yy",},
     {"name":"spr_strike","order":12,"path":"sprites/spr_strike/spr_strike.yy",},
     {"name":"spr_target","order":10,"path":"sprites/spr_target/spr_target.yy",},
     {"name":"spr_targetchoice","order":11,"path":"sprites/spr_targetchoice/spr_targetchoice.yy",},

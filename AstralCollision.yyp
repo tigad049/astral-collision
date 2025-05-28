@@ -93,6 +93,7 @@
     {"id":{"name":"spr_heartpieces","path":"sprites/spr_heartpieces/spr_heartpieces.yy",},},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},},
     {"id":{"name":"spr_star_placeholder","path":"sprites/spr_star_placeholder/spr_star_placeholder.yy",},},
+    {"id":{"name":"spr_star","path":"sprites/spr_star/spr_star.yy",},},
     {"id":{"name":"spr_strike","path":"sprites/spr_strike/spr_strike.yy",},},
     {"id":{"name":"spr_target","path":"sprites/spr_target/spr_target.yy",},},
     {"id":{"name":"spr_targetchoice","path":"sprites/spr_targetchoice/spr_targetchoice.yy",},},

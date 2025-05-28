@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_star_placeholder",
-    "path":"sprites/spr_star_placeholder/spr_star_placeholder.yy",
+    "name":"spr_star",
+    "path":"sprites/spr_star/spr_star.yy",
   },
   "spriteMaskId":null,
   "visible":true,
