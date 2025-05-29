@@ -73,7 +73,7 @@ if (global.key_cancel_pressed and menu_state == 1) and (block_input == 0) {
 	if fight_sel {fight_option_state -= 1}
 	if act_sel {act_option_state -= 1}
 	if item_sel {item_page = 0}
-	if mercy_sel {mercy_option_state -= 1} // todo: work on this thing
+	if mercy_sel {mercy_option_state -= 1}
 	if fight_option_state == 0 and act_option_state == 0 and item_page == 0 and mercy_option_state == 0 {menu_state = 0; in_menus = false}
 }
 

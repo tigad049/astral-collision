@@ -11,8 +11,7 @@ function clear_bullets() {
 
 pattern = 0;
 function random_pattern() {
-    //pattern = irandom(1);
-    pattern = 0;
+    pattern = irandom(1);
     
     if pattern == 0 {
         obj_battlebox.boxlerp(global.scx-(global.scx/4), 230, global.scx+(global.scx/4), 390, false);

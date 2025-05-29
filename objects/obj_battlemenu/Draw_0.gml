@@ -34,7 +34,7 @@ if (menu_state == 0) {
     qte_spawned = false;
 }
 
-if global.battle_state == 0 {
+if global.battle_state == 0 and not (obj_star.hp <= 0) {
     if in_menus {
         obj_dialogman.clear();
     }
@@ -85,20 +85,25 @@ if act_option_state > 0 {
                 obj_dialogman.dialog(52, 270, gettext("btl_talk_1"), global.font_dtm_mono);
             } else {
                 obj_dialogman.dialog(52, 270, gettext(talkask), global.font_dtm_mono);
+                global.talk = string_concat(talkask, "_res");
+                global.progress = 2;
             }
         }
         
         if menu_option_select[0] == 0 and menu_option_select[1] == 1 {
             if global.progress == 0 {
                 obj_dialogman.dialog(52, 270, gettext("btl_reason_1"), global.font_dtm_mono);
+                global.reasoned = true;
             } else {
                 obj_dialogman.dialog(52, 270, gettext("btl_reason_2"), global.font_dtm_mono);
             }
         }
         
         if menu_option_select[0] == 1 and menu_option_select[1] == 1 {
-            if global.progress == 2 {
+            if global.progress >= 2 {
                 obj_dialogman.dialog(52, 270, gettext("btl_pet_2"), global.font_dtm_mono);
+                global.progress = 3;
+                global.spareable = true;
             } else {
                 obj_dialogman.dialog(52, 270, gettext("btl_pet_1"), global.font_dtm_mono);
             }
@@ -130,6 +135,23 @@ if mercy_option_state > 0 {
     in_menus = true;
 	if mercy_option_state == 1 {
 		set_max_options(0, 0);
+        if global.spareable {
+            draw_set_color(c_yellow);
+        } else {
+            draw_set_color(c_white);
+        }
 		draw_text(52, 270, gettext("btl_ui_spare"));
-	}
+	} else if mercy_option_state >= 2 {
+        in_menus = false;
+        block_input = 1;
+		global.hide_player_soul = true;
+        obj_dialogman.dialog(52, 270, gettext("btl_youwon"), global.font_dtm_mono);
+        obj_star.image_alpha = 0.5;
+        audio_stop_sound(mus_astralcollision);
+        if not done {
+            obj_game.alarm[2] = 30*6;
+            done = true;
+        }
+        
+    }
 }

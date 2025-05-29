@@ -49,6 +49,7 @@ force_redraw = false;
 first_encounter = true;
 flavor = "";
 talkask = "";
+done = false;
 
 function set_max_options(_x, _y) {
 	max_menu_option_select = [_x, _y];
@@ -71,15 +72,19 @@ function advance_menu_option() {
     if (fight_option_state >= 1) {fight_option_state++;}
 	if (act_option_state >= 1) {act_option_state++; if act_option_state >= 3 {global.about_to_be_enemy_turn = true}}
 	if item_sel {item_page++;}
-	if (mercy_option_state >= 1) {mercy_option_state++;}
+	if (mercy_option_state >= 1 and global.spareable) {mercy_option_state++;}
 }
 
 function new_flavor_text() {
-    flavor = string_concat("btl_flavor_", irandom_range(1, 2))
+    if global.spareable {
+        flavor = "btl_spareable";
+    } else {
+        flavor = string_concat("btl_flavor_", irandom_range(1, 2)); 
+    }
 }
 
 function new_ask_text() {
-    talkask = string_concat("btl_talk_", irandom_range(2, 3))
+    talkask = string_concat("btl_talk_", irandom_range(2, 3));
 }
 
 new_flavor_text();

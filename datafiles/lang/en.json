@@ -11,10 +11,20 @@
 	"btl_flavor_1": "* Smells like static electricity.",
 	"btl_flavor_2": "* Star is having trouble holding\n  up her hammer.",
 
+	"btl_stardiag_1": "I wasn't\nprepared\nfor\nthis...!",
+	"btl_stardiag_2": "What do\nI do?!?",
+	"btl_stardiag_3": "Please\ndon't be\nmad at\nme...",
+	"btl_stardiag_4": "Awoo...",
+	"btl_stardiag_5": "A-are you\nsure...?\nIf you\nsay so...",
+	"btl_stardiag_6": "...",
+
 	"btl_spareable": "* Star has calmed down.",
 
-	"btl_talk_2_res": "Cookies & cream,\nof course!",
-	"btl_talk_3_res": "Long story...\nAnother time?",
+	"btl_talk_2_res": "Cookies\n& cream,\nof\ncourse!",
+	"btl_talk_3_res": "Long\nstory...\nAnother\ntime?",
+
+	"btl_youwon": "* YOU WON!\n* You earned 0 EXP and 45 gold.",
+	"btl_youwon_nomercy": "* YOU WON!\n* Your LOVE increased.\n* You earned 20 EXP and 30 gold.",
 
 	"btl_pet_1": "* Star backs away before your\n  hand could reach her head...",
 	"btl_pet_2": "* You gently pat Star on the head.",

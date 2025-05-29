@@ -28,8 +28,8 @@ global.plr_death_coords = [0, 0];
 global.plr_dead = false;
 global.about_to_be_enemy_turn = false;
 
-global.enemy_hp = 100;
-global.enemy_hp_max = 100;
+global.talk = "";
+global.reasoned = false;
 
 audio_play_sound(mus_astralcollision, 0, true, 0.8);
 //audio_play_sound(mus_gameover, 0, true, 1, 0, 0.925);
@@ -77,6 +77,7 @@ function switch_battle_state(state) {
 		obj_battlebox.boxlerp(32, 250, 606, 389, true);
 		obj_playersoul.speed = 0;
 		obj_bulletman.clear_bullets();
+        global.talk = "";
 	}
 }
 
@@ -91,6 +92,7 @@ function finished_boxlerp() {
         obj_battlemenu.new_flavor_text();
         obj_battlemenu.new_ask_text();
         obj_battlemenu.first_encounter = false;
+        global.reasoned = false;
 	}
     if global.battle_state == 1 {
         instance_create_depth(obj_star.x + 100, obj_star.y, 100, obj_speechbubble);

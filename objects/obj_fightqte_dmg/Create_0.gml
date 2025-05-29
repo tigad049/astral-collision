@@ -5,3 +5,5 @@ gravity_direction = 270;
 gravity = 0.5;
 direction = 90;
 speed = 5;
+oldhp = 0;
+i = 1;
